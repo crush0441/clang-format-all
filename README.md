@@ -26,3 +26,8 @@ same literals may be formatted with multiple entries per line if the entries are
 short enough. Therefore if multiple people are contributing to the same project,
 you should strive to ensure that they're all using the same version of
 `clang-format`.
+
+# Install
+1. Download hooksFormatConfig.sh
+2. move hooksFormatConfig.sh to your git project directory
+3. ./hooksFormatConfig.sh
