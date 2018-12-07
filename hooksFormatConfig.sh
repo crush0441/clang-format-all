@@ -16,6 +16,13 @@ else
 
 fi
 
+if command -v clang-format >/dev/null 2>&1; then 
+  echo 'exitst clang-format'
+else
+  sudo apt-get install clang-format
+  echo 'install clang-format'
+fi
+
 git-hooks install
 
 if [ ! -f .clang-format ];then
