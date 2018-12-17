@@ -45,5 +45,17 @@ echo '#!/bin/sh'>> githooks/pre-commit/format.sh
 echo 'echo 'formating !!!''>> githooks/pre-commit/format.sh
 echo './clang-format-all src'>> githooks/pre-commit/format.sh
 echo './clang-format-all include'>> githooks/pre-commit/format.sh
+
+echo 'array=`git diff-index --name-only HEAD`'>> githooks/pre-commit/format.sh
+echo 'for name in ${array} '>> githooks/pre-commit/format.sh
+echo 'do'>> githooks/pre-commit/format.sh
+echo 'echo ${name}'>> githooks/pre-commit/format.sh
+echo 'git add ${name}'>> githooks/pre-commit/format.sh
+echo 'done'>> githooks/pre-commit/format.sh
+echo 'echo 'add formated file''>> githooks/pre-commit/format.sh
+
+
+
+
 chmod +x githooks/pre-commit/format.sh
 echo 'config finished !!!!'
